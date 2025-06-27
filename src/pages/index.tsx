@@ -1,10 +1,15 @@
-import { Scene } from '@/components';
+import { WebGLScene, WebGPUScene } from '@/components';
 
 export default function Home() {
   return (
     <div className="flex flex-col h-full w-full">
-      <main className="overflow-hidden h-full w-full">
-        <Scene />
+      <main className="overflow-hidden h-full w-full flex flex-row">
+        <div className='w-1/2'>
+          <WebGLScene />
+        </div>
+        <div className='w-1/2'>
+          <WebGPUScene />
+        </div>
       </main>
       <footer className="w-full flex items-center justify-center border-t border-white py-4 text-gray-400">
         <a
