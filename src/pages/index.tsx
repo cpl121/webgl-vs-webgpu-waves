@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full w-full">
       <main className="overflow-hidden h-full w-full flex flex-row">
-        <div className='w-1/2'>
+        <div className="w-1/2">
           <WebGLScene />
         </div>
-        <div className='w-1/2'>
+        <div className="w-1/2">
           <WebGPUScene />
         </div>
       </main>

@@ -1,8 +1,23 @@
-import type { NextConfig } from 'next';
+import { NextConfig } from 'next';
 
+// next.config.ts
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: true,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(glsl|vert|frag|vs|fs)$/,
+      use: ['raw-loader'],
+    });
+    return config;
+  },
+
+  turbopack: {
+    rules: {
+      '*.{glsl,vert,frag,vs,fs}': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+    },
+  },
 };
 
 export default nextConfig;
