@@ -4,10 +4,18 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full w-full">
       <main className="overflow-hidden h-full w-full flex flex-row">
-        <div className="w-1/2">
+        <div className="w-1/2 border-r-4 border-white">
+          <div className='flex flex-col justify-center items-center border-b-2 text-white border-white py-4 space-y-2'>
+            <h1 className='text-3xl font-thin'>WEBGL</h1>
+            <span>25 campfires</span>
+          </div>
           <WebGLScene />
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 border-l-4 border-white">
+          <div className='flex flex-col justify-center items-center border-b-2 text-white border-white py-4 space-y-2'>
+            <h1 className='text-3xl font-thin'>WEBGPU</h1>
+            <span>100 campfires</span>
+          </div>
           <WebGPUScene />
         </div>
       </main>
