@@ -1,3 +1,4 @@
+export default `
 uniform sampler2D uNoiseTex;
 uniform float uTime;
 
@@ -26,4 +27,4 @@ void main() {
 
     #include <tonemapping_fragment>
     #include <colorspace_fragment>
-}
+}`;

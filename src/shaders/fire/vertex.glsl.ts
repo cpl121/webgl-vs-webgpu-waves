@@ -1,3 +1,4 @@
+export default `
 uniform float uTime;
 uniform sampler2D uNoiseTex;
 
@@ -25,4 +26,4 @@ void main() {
 
     // Varying
     vUv = uv;
-}
+}`;
