@@ -46,7 +46,6 @@ export default function WebGPUCanvas() {
     const stats = new Stats();
     stats.dom.style.position = 'absolute';
     stats.dom.style.top = '-100px';
-    // stats.dom.style.left = '-100px'
     stats.dom.style.zIndex = '100';
     container.appendChild(stats.dom);
 

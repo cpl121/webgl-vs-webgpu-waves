@@ -1,4 +1,3 @@
-// hooks/useStats.ts
 'use client';
 
 import { useEffect } from 'react';

@@ -16,13 +16,11 @@ void main() {
     smoke = smoothstep(0.4, 1.0, smoke);
     
     // Edges
-    // smoke = 1.0;
     smoke *= smoothstep(0.0, 0.1, vUv.y);
     smoke *= smoothstep(1.0, 0.7, vUv.y);
     smoke *= smoothstep(0.0, 0.1, vUv.x);
     smoke *= smoothstep(1.0, 0.9, vUv.x);
     
-    // gl_FragColor = vec4(1.0, vec2(0.0), 1.0);
     gl_FragColor = vec4(0.6, 0.6, 0.8, smoke);
 
     #include <tonemapping_fragment>

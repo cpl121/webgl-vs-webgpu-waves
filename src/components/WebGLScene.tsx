@@ -67,7 +67,6 @@ function FireShaderPlane() {
         depthWrite={false}
         blending={THREE.AdditiveBlending}
         side={THREE.DoubleSide}
-        //  wireframe
       />
     </mesh>
   );
@@ -102,7 +101,6 @@ function SmokeShaderPlane() {
         depthWrite={false}
         blending={THREE.AdditiveBlending}
         side={THREE.DoubleSide}
-        //  wireframe
       />
     </mesh>
   );
