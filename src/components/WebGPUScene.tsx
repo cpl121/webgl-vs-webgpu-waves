@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js';
@@ -43,7 +43,7 @@ export default function WebGPUCanvas() {
     const width = container.clientWidth;
     const height = container.clientHeight;
 
-    const stats = Stats();
+    const stats = new Stats();
     stats.dom.style.position = 'absolute';
     stats.dom.style.top = '-100px';
     // stats.dom.style.left = '-100px'
