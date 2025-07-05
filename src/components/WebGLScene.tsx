@@ -133,11 +133,11 @@ const WebGLScene = () => {
   return (
     <Canvas camera={{ position: [13.35, 0.75, 14.5], fov: 50, near: 0.1, far: 50 }}>
       <ambientLight intensity={0.5} />
-      <Stars radius={100} depth={50} count={50_000} factor={2} saturation={0} fade speed={2} />
       <directionalLight position={[2, 2, 2]} intensity={1} />
       {bonfirePositions.map((pos, i) => (
         <BonfireInstance key={i} position={pos} />
       ))}
+      <Stars radius={100} depth={50} count={50_000} factor={2} saturation={0} fade speed={2} />
       <OrbitControls
         // enableDamping={false}
         enablePan={false}

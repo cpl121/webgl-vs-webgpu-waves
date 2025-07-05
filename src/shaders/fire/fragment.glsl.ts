@@ -1,6 +1,7 @@
-varying vec2 vUv;
-uniform float uTime;
-uniform sampler2D uNoiseTex;
+export default `
+  varying vec2 vUv;
+  uniform float uTime;
+  uniform sampler2D uNoiseTex;
 
   void main() {
     vec2 uv = vUv;
@@ -31,4 +32,4 @@ uniform sampler2D uNoiseTex;
     color *= shapeMask;
 
     gl_FragColor = vec4(color, shapeMask);
-  }
+  }`;
