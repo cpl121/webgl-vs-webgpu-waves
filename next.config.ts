@@ -4,7 +4,7 @@ import { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   webpack(config) {
     config.module.rules.push({
-      test: /\.(glsl|vert|frag|vs|fs)$/,
+      test: /\.(wgsl,glsl|vert|frag|vs|fs)$/,
       use: ['raw-loader'],
     });
     return config;
@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
 
   turbopack: {
     rules: {
-      '*.{glsl,vert,frag,vs,fs}': {
+      '*.{wgsl,glsl,vert,frag,vs,fs}': {
         loaders: ['raw-loader'],
         as: '*.js',
       },
