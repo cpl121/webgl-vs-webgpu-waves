@@ -2,13 +2,13 @@ import { WebGLScene, WebGPUScene } from '@/components';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [webgpuSupported, setWebgpuSupported] = useState(true)
+  const [webgpuSupported, setWebgpuSupported] = useState(true);
 
   useEffect(() => {
     if (!navigator.gpu) {
-      setWebgpuSupported(false)
+      setWebgpuSupported(false);
     }
-  }, [])
+  }, []);
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -22,18 +22,21 @@ export default function Home() {
         </div>
         <div className="w-1/2 border-l-4 border-white">
           {!webgpuSupported && (
-            <div style={{
-              position: 'relative',
-              top: 0,
-              width: '100%',
-              backgroundColor: '#ff5555',
-              color: 'white',
-              padding: '10px',
-              textAlign: 'center',
-              fontWeight: 'bold',
-              zIndex: 9999
-            }}>
-              Your browser does not support WebGPU. Please use Chrome Canary or a compatible browser.
+            <div
+              style={{
+                position: 'relative',
+                top: 0,
+                width: '100%',
+                backgroundColor: '#ff5555',
+                color: 'white',
+                padding: '10px',
+                textAlign: 'center',
+                fontWeight: 'bold',
+                zIndex: 9999,
+              }}
+            >
+              Your browser does not support WebGPU. Please use Chrome Canary or a compatible
+              browser.
             </div>
           )}
           <div className="flex flex-col justify-center items-center border-b-2 text-white border-white py-4 space-y-2">
