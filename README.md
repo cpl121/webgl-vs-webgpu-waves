@@ -28,5 +28,6 @@ This project showcases a side-by-side comparison of **WebGL** and **WebGPU** ren
 - 🛑 Browser fallback notice if WebGPU is not supported.
 
 ### 📊 Performance Observations
+
 - WebGL is stable and compatible, but performance drops as the scene scales.
 - WebGPU maintains high FPS with many objects, better GPU parallelism.
