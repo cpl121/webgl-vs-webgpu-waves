@@ -201,7 +201,7 @@ export default function WebGPUCanvas() {
     container.appendChild(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.enableDamping = false
+    controls.enableDamping = true;
     controls.enablePan = false;
     controls.enableZoom = false;
     controls.minPolarAngle = Math.PI / 2.2;
