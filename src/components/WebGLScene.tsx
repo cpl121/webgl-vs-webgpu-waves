@@ -67,7 +67,6 @@ function FireShaderPlane() {
         depthWrite={false}
         blending={THREE.AdditiveBlending}
         side={THREE.DoubleSide}
-        //  wireframe
       />
     </mesh>
   );
@@ -102,7 +101,6 @@ function SmokeShaderPlane() {
         depthWrite={false}
         blending={THREE.AdditiveBlending}
         side={THREE.DoubleSide}
-        //  wireframe
       />
     </mesh>
   );
@@ -139,7 +137,6 @@ const WebGLScene = () => {
       ))}
       <Stars radius={100} depth={50} count={50_000} factor={2} saturation={0} fade speed={2} />
       <OrbitControls
-        // enableDamping={false}
         enablePan={false}
         enableZoom={false}
         enableDamping

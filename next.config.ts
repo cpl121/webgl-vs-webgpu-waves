@@ -1,6 +1,5 @@
 import { NextConfig } from 'next';
 
-// next.config.ts
 const nextConfig: NextConfig = {
   webpack(config) {
     config.module.rules.push({

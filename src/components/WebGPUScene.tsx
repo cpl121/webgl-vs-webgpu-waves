@@ -46,7 +46,6 @@ export default function WebGPUCanvas() {
     const stats = new Stats();
     stats.dom.style.position = 'absolute';
     stats.dom.style.top = '-100px';
-    // stats.dom.style.left = '-100px'
     stats.dom.style.zIndex = '100';
     container.appendChild(stats.dom);
 
@@ -201,7 +200,7 @@ export default function WebGPUCanvas() {
     container.appendChild(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.enableDamping = false
+    controls.enableDamping = true;
     controls.enablePan = false;
     controls.enableZoom = false;
     controls.minPolarAngle = Math.PI / 2.2;
