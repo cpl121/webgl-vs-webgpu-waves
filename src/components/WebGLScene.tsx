@@ -8,8 +8,8 @@ import vertexFireShader from '../shaders/fire/vertex.glsl';
 import fragmentFireShader from '../shaders/fire/fragment.glsl';
 import vertexSmokeShader from '../shaders/smoke/vertex.glsl';
 import fragmentSmokeShader from '../shaders/smoke/fragment.glsl';
-import { Stats } from '@react-three/drei'
-import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js'
+import { Stats } from '@react-three/drei';
+import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js';
 
 const FlickeringLight = () => {
   const lightRef = useRef<THREE.SpotLight>(null);
@@ -26,18 +26,16 @@ const FlickeringLight = () => {
 };
 
 function Campfire() {
-  const { scene } = useGLTF('/assets/campfire.glb')
-  const modelRef = useRef<THREE.Object3D>(null)
+  const { scene } = useGLTF('/assets/campfire.glb');
+  const modelRef = useRef<THREE.Object3D>(null);
 
-  const cloned = useRef<THREE.Object3D>(null)
+  const cloned = useRef<THREE.Object3D>(null);
 
   if (!cloned.current) {
-    cloned.current = clone(scene)
+    cloned.current = clone(scene);
   }
 
-  return (
-    <primitive object={cloned.current} ref={modelRef} scale={[0.005, 0.005, 0.005]} />
-  )
+  return <primitive object={cloned.current} ref={modelRef} scale={[0.005, 0.005, 0.005]} />;
 }
 
 function FireShaderPlane() {
@@ -113,23 +111,23 @@ function SmokeShaderPlane() {
 function BonfireInstance({ position }: { position: [number, number, number] }) {
   return (
     <group position={position}>
-      <FlickeringLight/>
+      <FlickeringLight />
       <Campfire />
       <FireShaderPlane />
       <SmokeShaderPlane />
     </group>
-  )
+  );
 }
 
 const WebGLScene = () => {
-  const bonfirePositions = []
+  const bonfirePositions = [];
 
-  const gridSize = 5
-  const spacing = 3
+  const gridSize = 5;
+  const spacing = 3;
 
   for (let x = 0; x < gridSize; x++) {
     for (let z = 0; z < gridSize; z++) {
-      bonfirePositions.push([x * spacing, -0.0, z * spacing] as [number, number, number])
+      bonfirePositions.push([x * spacing, -0.0, z * spacing] as [number, number, number]);
     }
   }
   return (
@@ -150,10 +148,10 @@ const WebGLScene = () => {
         minAzimuthAngle={Math.PI / 5}
         maxAzimuthAngle={Math.PI / 3}
       />
-       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[8, -0.01, 8]} receiveShadow>
-          <planeGeometry args={[35, 35]} />
-          <meshStandardMaterial color="#3b2f23" roughness={1} />
-        </mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[8, -0.01, 8]} receiveShadow>
+        <planeGeometry args={[35, 35]} />
+        <meshStandardMaterial color="#3b2f23" roughness={1} />
+      </mesh>
       <Stats />
     </Canvas>
   );
